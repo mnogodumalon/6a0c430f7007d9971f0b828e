@@ -1,0 +1,8 @@
+- Kundenverwaltung (kundenverwaltung): vorname[string/text], nachname[string/text], telefon[string/tel], email[string/email], strasse[string/text], hausnummer[string/text], plz[string/text], ort[string/text], notizen_kunde[string/textarea]
+- Katzenverwaltung (katzenverwaltung): rasse[string/text], geburtsdatum[date/date], geschlecht[lookup/radio], farbe[string/text], impfstatus[lookup/select], besonderheiten[string/textarea], besitzer[applookup/select], name[string/text]
+  → besitzer links to app_id 6a0c42e7de07a0de23255896
+- Zusatzleistungen (zusatzleistungen): leistung_name[string/text], leistung_beschreibung[string/textarea], preis[number]
+- Buchungsverwaltung (buchungsverwaltung): kunde[applookup/select], katze[applookup/select], anreisedatum[date/date], abreisedatum[date/date], box_nummer[string/text], zusatzleistungen_buchung[multipleapplookup/select], gesamtpreis[number], notizen_buchung[string/textarea]
+  → kunde links to app_id 6a0c42e7de07a0de23255896
+  → katze links to app_id 6a0c42effc83aceb7db3c82e
+  → zusatzleistungen_buchung links to app_id 6a0c42f058a2e85a9b23e897
